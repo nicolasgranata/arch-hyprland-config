@@ -1,0 +1,7 @@
+mode=drun
+lines=10
+allow_images=false
+location=center
+prompt="Search..."
+no_actions=true
+sort_order=alphabetical

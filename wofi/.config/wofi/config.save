@@ -1,0 +1,7 @@
+mode=drun
+allow_images=false
+location=center
+prompt="Search..."
+no_actions=true
+terminal=alacritty
+sort_order=alphabetical

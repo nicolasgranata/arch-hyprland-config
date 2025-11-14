@@ -1,0 +1,82 @@
+/* * ----------------------------------------------------
+ * SOLARIZED DARK STYLE - WITHOUT PREFIX
+ * ----------------------------------------------------
+ */
+
+@define-color base03 rgb(0, 43, 54);     /* Darkest Background (Window) */
+@define-color base02 rgb(7, 54, 66);     /* Secondary Background (Input, Selected) */
+@define-color base0 rgb(131, 148, 150);  /* Main Light Text Color */
+@define-color base1 rgb(147, 161, 161);  /* Subtle Border Color */
+@define-color blue rgb(38, 139, 210);    /* Main Accent Color */
+
+/* * ----------------------------------------------------
+ * MAIN WINDOW STYLE
+ * ----------------------------------------------------
+ */
+window {
+    background-color: alpha(@base03, 0.90);
+    color: @base0; /* Main text color */
+    font-family: 'Fira Mono for Powerline, monospace';
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid @base1; /* Subtle border color */
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#outer-box {
+    padding: 5px;
+    border: none;
+}
+
+/* * ----------------------------------------------------
+ * SEARCH INPUT BAR
+ * ----------------------------------------------------
+ */
+#input {
+    background-color: @base02; /* Secondary background */
+    border: none;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    color: @base0; /* Text box color for filtering items */
+}
+
+#input:focus{
+    /* Use the main text color for the shadow */
+    box-shadow: 0 0 10px 1px alpha(@base0, 0.5); 
+}
+/* * ----------------------------------------------------
+ * RESULTS LIST (Entries)
+ * ----------------------------------------------------
+ */
+#entry {
+    background-color: transparent;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 3px;
+    min-height: 25px; 
+}
+
+/* * ----------------------------------------------------
+ * SELECTED/HOVERED RESULT
+ * ----------------------------------------------------
+ */
+#entry:selected {
+    /* Selection background */
+    background-color: @base02; 
+    
+    /* Selected item text color */
+    color: @base0;
+    border-left: 3px solid @blue; /* Visual indicator using the blue accent */
+    padding-left: 5px;
+}
+
+/* * ----------------------------------------------------
+ * OTHER ELEMENTS
+ * ----------------------------------------------------
+ */
+ 
+/* Ensure the text within the selected entry doesn't have an unwanted background */
+#text:selected {
+    background-color: transparent;
+}
