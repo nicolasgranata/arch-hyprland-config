@@ -32,3 +32,8 @@ bash bin/install-firefox.sh
 
 chmod +x bin/install-stow.sh
 bash bin/install-stow.sh
+
+cd dotfiles
+stow -v -t $HOME .
+
+echo "Reiniciando el sistema en 10 segundos..." && sleep 10 && reboot
